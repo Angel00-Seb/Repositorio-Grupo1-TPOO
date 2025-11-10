@@ -31,7 +31,7 @@ public class Puesto {
 
     @Override
     public String toString() {
-        return "Puesto{" + "Nombre=" + Nombre + ", Sueldo=" + Sueldo + '}';
+        return " 'Puesto'" + " NOMBRE: " + Nombre + ", SUELDO: " + Sueldo;
     }
     
 }

@@ -52,7 +52,7 @@ public class Juridico extends Cliente{
 
     @Override
     public String toString() {
-        return "Juridico{" + "Ruc=" + Ruc + ", Razon_Social=" + Razon_Social + ", Fax=" + Fax + ", Contacto=" + Contacto + '}' + super.toString();
+        return "'JURIDICO' " + " RUC: " + Ruc + ", RAZON_SOCIAL: " + Razon_Social + ", FAX: " + Fax + ", CONTACTO: " + Contacto + super.toString();
     }
     
 }

@@ -39,7 +39,7 @@ public class Categoria {
     // Método toString
     @Override
     public String toString() {
-        return "Categoria{" + "idCategoria=" + idCategoria + ", Tipo=" + Tipo + '}';
+        return " 'CATEGORIA' " + " ID_CATEGORIA:" + idCategoria + ", TIPO:" + Tipo;
     }
 
 }

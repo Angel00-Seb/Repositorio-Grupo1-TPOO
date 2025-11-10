@@ -62,7 +62,7 @@ public class Natural extends Cliente{
 
     @Override
     public String toString() {
-        return "Natural{" + "Apellidos=" + Apellidos + ", Nombres=" + Nombres + ", Fecha_Nacimiento=" + Fecha_Nacimiento + ", Dni=" + Dni + ", Sexo=" + Sexo + '}' + super.toString();
+        return "'NATURAL' " + "APELLIDOS: " + Apellidos + ", NOMBRES: " + Nombres + ", FECHA_NACIMIENTO: " + Fecha_Nacimiento + ", DNI: " + Dni + ", SEXO: " + Sexo + super.toString();
     }
     
 }

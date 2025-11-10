@@ -73,8 +73,7 @@ public class Personal {
 
     @Override
     public String toString() {
-        return "Personal{" + "idPersonal= " + idPersonal + ", Apellidos=" + Apellidos + ", Nombres=" + Nombres + ", Fecha_Nacimiento="
-                + Fecha_Nacimiento + ", Dni=" + Dni + ", Puesto=" + Puesto + '}';
+        return "ID_PERSONAL: " + idPersonal + ", APELLIDOS: " + Apellidos + ", NOMBRES: " + Nombres + ", FECHA_NACIMIENTO: " + Fecha_Nacimiento + ", DNI: " + Dni+ Puesto;
     }
 
 }

@@ -81,8 +81,7 @@ public class Pedido {
 
     @Override
     public String toString() {
-        return "Pedido{" + "idPedido=" + idPedido + ", Fecha=" + Fecha + ", Estado=" + Estado + ", Total=" + Total + ", Cliente=" + Cliente + ", Personal=" + Personal
-                + ", Detalle=" + Detalle + '}';
+        return "ID_PEDIDO: " + idPedido + ", FECHA: " + Fecha + ", ESTADO: " + Estado + ", TOTAL: " + Total + ", CLIENTE: " + Cliente + ", PERSONAL: " + Personal + ", DETALLE: " + Detalle;
     }
 
     // Métodos adicionales

@@ -55,7 +55,7 @@ public class PedidoDetalle {
 
     @Override
     public String toString() {
-        return "PedidoDetalle{" + "idDetalle=" + idDetalle + ", Importe=" + Importe + ", Cantidad=" + Cantidad + ", Producto=" + Producto + '}';
+        return "ID_DATALLE: " + idDetalle + ", IMPORTE: " + Importe + ", CANTIDAD: " + Cantidad + ", 'PRODUCTO' " + Producto;
 }
     
     //Métodos adicionales
