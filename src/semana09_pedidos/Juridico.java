@@ -10,8 +10,8 @@ public class Juridico extends Cliente{
     public Juridico() {
     }
 
-    public Juridico(String Ruc, String Razon_Social, String Fax, String Contacto, String Direccion, String Telefono, String Email) {
-        super(Direccion, Telefono, Email);
+    public Juridico(int idCliente, String Ruc, String Razon_Social, String Fax, String Contacto, String Direccion, String Telefono, String Email) {
+        super(idCliente, Direccion, Telefono, Email); 
         this.Ruc = Ruc;
         this.Razon_Social = Razon_Social;
         this.Fax = Fax;

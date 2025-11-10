@@ -1,31 +1,41 @@
 package semana09_pedidos;
 import java.util.ArrayList;
-import java.util.Date;
-
 
 public class Pedido {
-    private Date Fecha;
+    private int idPedido; // agregado
+    private String Fecha; // cambiarlo por String, estaba en Date
     private boolean Estado;
-    private Cliente Cliente; //Relación con Cliente (1:n)
-    private Personal Personal; //Relación con Personal (1:n)
-    private ArrayList<PedidoDetalle> Detalle; //Relación con PedidoDetalle (1:n)
+    private double Total; // agregado
+    private Cliente Cliente; // Relación con Cliente (1:n)
+    private Personal Personal; // Relación con Personal (1:n)
+    private ArrayList<PedidoDetalle> Detalle; // Relación con PedidoDetalle (1:n)
 
     public Pedido() {
+        this.Detalle = new ArrayList<>(); //agregado, solo crea la lista vacía al construir el objeto
     }
 
-    public Pedido(Date Fecha, boolean Estado, Cliente Cliente, Personal Personal) {
+    public Pedido(int idPedido, String Fecha, boolean Estado, Cliente Cliente, Personal Personal,  double Total) {
+        this.idPedido = idPedido;
         this.Fecha = Fecha;
         this.Estado = Estado;
+        this.Total = Total;
         this.Cliente = Cliente;
         this.Personal = Personal;
         this.Detalle = new ArrayList<>();
     }
+    public int getIdPedido() {
+        return idPedido;
+    }
 
-    public Date getFecha() {
+    public void setIdPedido(int idPedido) {
+        this.idPedido = idPedido;
+    }
+
+    public String getFecha() {
         return Fecha;
     }
 
-    public void setFecha(Date Fecha) {
+    public void setFecha(String Fecha) {
         this.Fecha = Fecha;
     }
 
@@ -35,6 +45,14 @@ public class Pedido {
 
     public void setEstado(boolean Estado) {
         this.Estado = Estado;
+    }
+    
+    public double getTotal() {
+        return Total;
+    }
+
+    public void setTotal(double Total) {
+        this.Total = Total;
     }
 
     public Cliente getCliente() {
@@ -57,20 +75,22 @@ public class Pedido {
         return Detalle;
     }
 
-    public void setDetalle(ArrayList<PedidoDetalle> Detalle) {
+    public void setDetalle(ArrayList<PedidoDetalle> Detalle) { // Si se reemplaza la lista, considerar recalcular
         this.Detalle = Detalle;
     }
 
     @Override
     public String toString() {
-        return "Pedido{" + "Fecha=" + Fecha + ", Estado=" + Estado + ", Cliente=" + Cliente + ", Personal=" + Personal + ", Detalle=" + Detalle + '}';
+        return "Pedido{" + "idPedido=" + idPedido + ", Fecha=" + Fecha + ", Estado=" + Estado + ", Total=" + Total + ", Cliente=" + Cliente + ", Personal=" + Personal
+                + ", Detalle=" + Detalle + '}';
     }
-    
+
     // Métodos adicionales
     public void agregarDetalle(PedidoDetalle detalle) {
         this.Detalle.add(detalle);
+        this.Total = calcularTotal();
     }
-    
+
     public double calcularTotal() {
         double total = 0;
         for (PedidoDetalle detalle : Detalle) {
@@ -78,4 +98,13 @@ public class Pedido {
         }
         return total;
     }
+
+    public void marcarComoFinalizado() { // Cambia el estado del pedido a "finalizado" (entregado o completado)
+    this.Estado = true;
+    }
+
+    public void marcarComoPendiente() { // Cambia el estado del pedido a "pendiente" (aún en proceso o sin entregar)
+    this.Estado = false;
+    }
+
 }

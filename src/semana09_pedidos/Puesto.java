@@ -2,23 +2,23 @@ package semana09_pedidos;
 
 
 public class Puesto {
-    private String Descripcion;
+    private String Nombre;
     private double Sueldo;
 
     public Puesto() {
     }
 
-    public Puesto(String Descripcion, double Sueldo) {
-        this.Descripcion = Descripcion;
+    public Puesto(String Nombre, double Sueldo) {
+        this.Nombre = Nombre;
         this.Sueldo = Sueldo;
     }
 
-    public String getDescripcion() {
-        return Descripcion;
+    public String getNombre() {
+        return Nombre;
     }
 
-    public void setDescripcion(String Descripcion) {
-        this.Descripcion = Descripcion;
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
     }
 
     public double getSueldo() {
@@ -31,7 +31,7 @@ public class Puesto {
 
     @Override
     public String toString() {
-        return "Puesto{" + "Descripcion=" + Descripcion + ", Sueldo=" + Sueldo + '}';
+        return "Puesto{" + "Nombre=" + Nombre + ", Sueldo=" + Sueldo + '}';
     }
     
 }

@@ -1,19 +1,18 @@
 package semana09_pedidos;
-import java.util.Date;
 
 
 public class Natural extends Cliente{
     private String Apellidos;
     private String Nombres;
-    private Date Fecha_Nacimiento;
+    private String Fecha_Nacimiento; // cambiar por string
     private String Dni;
     private String Sexo;
 
     public Natural() {
     }
 
-    public Natural(String Apellidos, String Nombres, Date Fecha_Nacimiento, String Dni, String Sexo, String Direccion, String Telefono, String Email) {
-        super(Direccion, Telefono, Email);
+    public Natural(int idCliente, String Apellidos, String Nombres, String Fecha_Nacimiento, String Dni, String Sexo, String Direccion, String Telefono, String Email) {
+        super(idCliente, Direccion, Telefono, Email);
         this.Apellidos = Apellidos;
         this.Nombres = Nombres;
         this.Fecha_Nacimiento = Fecha_Nacimiento;
@@ -37,11 +36,11 @@ public class Natural extends Cliente{
         this.Nombres = Nombres;
     }
 
-    public Date getFecha_Nacimiento() {
+    public String getFecha_Nacimiento() {
         return Fecha_Nacimiento;
     }
 
-    public void setFecha_Nacimiento(Date Fecha_Nacimiento) {
+    public void setFecha_Nacimiento(String Fecha_Nacimiento) {
         this.Fecha_Nacimiento = Fecha_Nacimiento;
     }
 
